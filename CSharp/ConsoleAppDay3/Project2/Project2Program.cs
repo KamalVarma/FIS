@@ -7,7 +7,7 @@ using ConsoleAppDay3;
 
 namespace Project2
 {
-    class Project2Program
+    class Project2Program :Employee
     {
         static void Main(string[] args)
         {
@@ -16,6 +16,9 @@ namespace Project2
             Console.WriteLine(emp.Empname);
             emp.Accept();
             emp.Display();
+            Project2Program pp2 = new Project2Program();
+            pp2.Salary = 40000.0f;
+            pp2.Test();
             Console.Read();
         }
     }
