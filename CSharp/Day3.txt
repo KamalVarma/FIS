@@ -1,0 +1,85 @@
+OOPS: Object Oriented Programming  - WYSIWYG
+
+Object : Descriptive features, Behaviours and a state
+
+class
+
+Basic Pillars
+
+Encapsulation : Unit of Info.
+
+Abstraction : Give required Data and hide non required data
+
+Inheritance : Extension Single Inheritance, Multilevel Inheritance
+
+Polymorphism : 1. overloading, 2. overriding
+
+Access Specifiers: 
+1. Private : Are accessible only in the class where it is declared and not outside the class. All members of the class are private by default.
+2. Public :  All classes within the assembly or outside the assembly with or without derivation can access public members. To access we need to create objects of the class and include references, if outside assembly
+3. Internal : It is like public, but within the same asembly. All classes are internal by default
+4. Protected : Accessible to the class where it is declared and all its derived classes. The derived classes can be in the same assembly or different assembly.
+5. Protected Internal or Internal Protected : Is internal to all the derived and non-derived classes of the same assembly. Acts as protected to all the derived classes irrespective of the assemblies
+
+Namespace OOPsproject
+{
+
+class Employee
+{
+   int Empid;
+   string EmpName;
+   string EmpAddress;
+   DateTime DOB;
+   DateTime DOJ;
+   Double Salary;
+
+public void Display(){  }
+public void Accept() {  }
+
+}
+
+class Neighbour
+{
+   float datapoint;
+   public string remarks;
+static void Main()
+{
+   Employee employee= new Employee();
+   employee.Accept();
+   employee.Display();
+   Console.Read();
+}
+
+}
+   
+}
+
+Constructors: 
+- Are special functions of a class with the same name as that of the class
+- They are used to initialize the fields
+- They have to be public
+- They do not have any return type
+- They can be parameterized and hence overloaded
+- They are called explicitly
+
+Destructors:
+- They are special function of the class with the same name as that of the class, prefixed with a ~ (tilde)
+- They do not have return type nor access specifier
+- They cannot be overloaded
+- They cannot be invoked (gets called automatically)
+
+Destructors are not required, as the clr calls upon the dispose() and finalize() functions to reclaim the memory
+
+Base class initialization thru child class constructor: using the keyword base
+  whenever the base class has parameterized constructor, then the child class has to have a constructor that passes data to the base class constructor
+
+Member Variables in a class are called fields.
+Properties: are named members of classes,structures,interfaces 
+            are extensions of fields
+            they have to be public
+            they are accessed using the accessors (mutators, accessors) through which the private fields can be read, written or manipulated
+            they do not name the storage locations, instead they have accessors to read/write or compute values
+            
+            are
+
+

@@ -14,10 +14,10 @@ namespace ConsoleAppDay3
         internal protected float Salary;
 
         //1.
-        public Employee()
-        {
-            Console.WriteLine("Hello from Employee");
-        }
+        //public Employee()
+        //{
+        //    Console.WriteLine("Hello from Employee");
+        //}
 
         //2.
         public Employee(int Empid, string Empname)
@@ -59,21 +59,25 @@ namespace ConsoleAppDay3
     }
     internal class Program : Employee
     {
+       public Program(int i, string s):base(i, s)
+        {
+            Console.WriteLine("Initialized base..");
+        }
         static void Main(string[] args)
         {
-            Employee employee = new Employee(); //1. constructor
+            //Employee employee = new Employee(); //1. constructor
             Employee e2 = new Employee(5, "Sujan"); //2. constructor
             Employee e3 = new Employee(10, 45000.5f); //3. constructor
            // employee.Accept();
-            employee.Display();
+           // employee.Display();
             e2.Display();
             e3.Display();
-            employee = null;
+           // employee = null;
             e2 = null;
             e3 = null;
-            GC.Collect();
+           // GC.Collect();
             //employee.Empname = "Shinde";
-            //Program program = new Program();
+            Program program = new Program(50,"Banurekha");
             //program.Salary = 50000.0f;
             //program.Test();
             Console.Read();
@@ -86,8 +90,8 @@ namespace ConsoleAppDay3
         {
             Individual ind = new Individual();
             
-            Employee e = new Employee();
-            e.Salary = 10000.0f;
+           // Employee e = new Employee();
+           // e.Salary = 10000.0f;
             
         }
     }
